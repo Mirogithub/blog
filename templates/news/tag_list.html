@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %} | {{ title }} {% endblock %}
+
+{% block content %}
+<div id="wrapper" class="homepage-1">
+  <div id="content"> <!-- Content -->
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title-inner clearfix">
+          <h3>Tags</h3>
+          <div class="breadcumb"> <a href="/">HOME</a><span> / </span><span>tags</span><span> / </span><span>{{ category }}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-page sing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="news-list-box">
+            {% if tags %}
+              {% for tag in tags %}
+              <div class="one-block">
+                <div class="box-txt">
+                  <div class="name-tag"><a href="{{ tag.get_update_url }}">{{ tag.name }}</a></div>
+                  <form action="{{ tag.get_delete_url }}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-danger">Delete</button>
+                  </form>
+                </div>
+              </div>
+              {% endfor %}
+            {% else %}
+                <p>You don't have any tags</p>
+            {% endif %}
+          </div>
+          {% if is_paginated %}
+            <nav class="product-pagination">
+              <ul class="pagination believe-pag">
+              {% for n in tags.paginator.page_range %}
+
+                {% if tags.number == n %}
+                  <li><a href="?page={{ n }}"><b>-{{ n }}-</b></a></li>
+                {% else %}
+                  <li><a href="?page={{ n }}">{{ n }}</a></li>
+                {% endif %}
+
+              {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

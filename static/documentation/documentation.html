@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>believe</title>
+		
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.container{
+				max-width:900px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h3 align="center"><em><small>"Believe" Documentation by "minimalthemes" v1.0</small></em></h3>
+			<hr/>
+			<h2 align="center">"Believe - HTML Template"</h2>
+			<hr/>
+			<div class="row clearfix">
+				<div class="col-md-3">
+					<p align="justify">
+						Created : <br/>
+						By : <a href="http://themeforest.net/user/minimalthemes">Minimalthemes</a><br/>
+						Email : <a href="mailto:support@puriwp.com">Email Me</a><br/>
+					</p>
+				</div>
+				<div class="col-md-9">
+					<p align="justify">
+						Thank you for purchasing this item, supporting our work. Please do not forget to rate our product.
+We would be happy to see your comments and stars.
+					</p>
+				</div>
+			</div>
+			<hr/>
+			<h4 id="tbl-content"><em>Table Of Contents</em></h4>
+			<ol type="A" start="A">
+				<li><a href="#html-structure">HTML Structure</a></li>
+				<li><a href="#css-structure">CSS Structure</a></li>
+				<li><a href="#java">Javascript</a></li>
+				<li><a href="#other">Other Details</a></li>
+				<li><a href="#uploading">Uploading Templates</a></li>
+				<li><a href="#credit">Credits</a></li>
+			</ol>
+			<hr/>
+			<h3 id="html-structure">A. HTML Structure</h3>
+			<p>
+Believe is clean e-coomerce template, build with responsive design and semantic code, include 3 diferent homepage design, 12 inner page, and 4 shortcode page. the template is easy customizable
+			</p>
+			<h4>Header</h4>
+			<p>
+				Header contains Top section where is containing Social Media Links, register and login  button, you can easily change the link and name according to your needs.
+				<pre>
+					<code>
+&lt;div class="top"&gt; &lt;!-- top --&gt;
+                  &lt;div class="container"&gt;
+                      &lt;ul class="top-support"&gt; 
+                          &lt;li&gt;&lt;i class="fa fa-phone-square"&gt;&lt;/i&gt;&lt;span&gt;(+800) 123 456 7890&lt;/span&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href=""&gt;&lt;i class="fa fa-envelope-square"&gt;&lt;/i&gt;&lt;span&gt;info@bootstrapmart.com&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;div class="top-offers"&gt;
+                          &lt;div class="alert alert-warning alert-dismissible fade in offers" role="alert"&gt;
+                              &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times-circle"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+                              Free Shipping &lt;a href=""&gt;on All Orders Over&lt;/a&gt; $75!
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="top-control"&gt;
+                          &lt;a href=""&gt;Track Order&lt;/a&gt;&lt;span&gt;&#x2022;&lt;/span&gt;&lt;a href=""&gt;Register&lt;/a&gt;&lt;span&gt;&#x2022;&lt;/span&gt;&lt;a href=""&gt;Login&lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;div class="clearfix"&gt;&lt;/div&gt;
+                      &lt;div class="top-offers show-mobile"&gt;
+                          &lt;div class="alert alert-warning alert-dismissible fade in offers" role="alert"&gt;
+                              &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times-circle"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+                              Free Shipping &lt;a href=""&gt;on All Orders Over&lt;/a&gt; $75!
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+&lt;/div&gt; &lt;!-- top --&gt;
+					</code>
+				</pre>
+				
+				and then the site logo. Editing the logo you can easily change the home link and the logo image.<br/>
+				<pre>
+					<code>
+&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+      &lt;div class="navbar-header"&gt;
+               &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                      &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+                      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                 &lt;/button&gt;
+                 &lt;a class="navbar-brand" href="index.html"&gt;&lt;img src="images/logo.png" alt=""&gt;&lt;/a&gt;
+&lt;/div&gt;
+					</code>
+				</pre>
+			</p>
+			
+			<h4>Navigation</h4>
+			<p>
+				Site navigation is found in preview code below. To create or modify main menu items, just find this code on template package and change menu link and menu name according to your needs . To add a submenu item create child list item with class "sub-menu".
+			</p>
+			<div class="highlight">
+				<pre>
+					<code>
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+       &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+              &lt;ul class="nav navbar-nav"&gt;
+                    &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                         &lt;li class="dropdown"&gt;
+                              &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Pages &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/a&gt;
+                                   &lt;ul class="dropdown-menu" role="menu"&gt;
+                                         &lt;li&gt;&lt;a href="index.html"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+                                         &lt;li&gt;&lt;a href="index-2.html"&gt;Homepage 2&lt;/a&gt;&lt;/li&gt;
+                                         &lt;li&gt;&lt;a href="index-3.html"&gt;Homepage 3&lt;/a&gt;&lt;/li&gt;
+                                         &lt;li&gt;&lt;a href="about-page.html"&gt;About Page&lt;/a&gt;&lt;/li&gt;
+                                         &lt;li&gt;&lt;a href="blog.html"&gt;Blog Page&lt;/a&gt;&lt;/li&gt;
+                                         &lt;li&gt;&lt;a href="blog-detail.html"&gt;Detail Blog Page&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="faq.html"&gt;Faq's&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="contact.html"&gt;Contact Page&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="shop.html"&gt;Shop Page&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="shop-grid.html"&gt;Shop Page Grid view&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="shop-detail.html"&gt;Detail Shop Page 1&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="shop-detail-2.html"&gt;Detail Shop Page 2&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="shop-detail-3.html"&gt;Detail Shop Page 3&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="cart.html"&gt;Cart Page&lt;/a&gt;&lt;/li&gt;
+                                          &lt;li&gt;&lt;a href="checkout.html"&gt;Checkout Page&lt;/a&gt;&lt;/li&gt;
+                                     &lt;/ul&gt;
+                              &lt;/li&gt;
+                              &lt;li class="dropdown"&gt;
+                                   &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"&gt;Elements &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/a&gt;
+                                        &lt;ul class="dropdown-menu" role="menu"&gt;
+                                              &lt;li&gt;&lt;a href="heading.html"&gt;Heading&lt;/a&gt;&lt;/li&gt;
+                                              &lt;li&gt;&lt;a href="tab.html"&gt;Tab&lt;/a&gt;&lt;/li&gt;
+                                              &lt;li&gt;&lt;a href="notife.html"&gt;Notification Bar&lt;/a&gt;&lt;/li&gt;
+                                              &lt;li&gt;&lt;a href="pagination.html"&gt;Pagination&lt;/a&gt;&lt;/li&gt;
+                                         &lt;/ul&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;&lt;a href="blog.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                       &lt;/ul&gt;
+                                     
+                       &lt;ul class="nav navbar-nav navbar-right"&gt;
+                             &lt;li class="menu-search-form"&gt;
+                                  &lt;a href="#" id="open-srch-form"&gt;&lt;img src="images/srch.png" alt="srch"&gt;&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/pav.png" alt="pav"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                              &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/bag.png" alt="bag"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                              &lt;li id="open-srch-form-mod"&gt;
+                                   &lt;div&gt;
+                                        &lt;form class="side-search"&gt;
+                                                  &lt;div class="input-group"&gt;
+                                                          &lt;input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon1"&gt;
+                                                          &lt;a href="" class="input-group-addon btn-side-serach" id="basic-addon1"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+                                                     &lt;/div&gt;
+                                         &lt;/form&gt;
+                                     &lt;/div&gt;
+                                  &lt;/li&gt;
+                           &lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+					</code>
+				</pre>
+			</div>
+			
+			<h4>Slider</h4>
+			<p>
+				In The silder section you can change the image with your own image.
+				<pre>
+					<code>
+&lt;div id="main-slider"&gt; &lt;!-- Slider --&gt;
+              &lt;div id="home-slider" class="owl-carousel owl-theme"&gt;
+                  &lt;div class="item"&gt;
+                      &lt;img src="images/slider-1.jpg" alt="slide-1" class="img-responsive"&gt;
+                      &lt;div class="slider-desc"&gt;
+                          &lt;div class="container"&gt;
+                              &lt;div class="row"&gt;
+                                  &lt;div class="col-md-6"&gt;
+                                      &lt;div class="slide-offers-left"&gt;
+                                          &lt;div class="slide-offers-title"&gt;&lt;span&gt;Men&#x2019;s&lt;/span&gt;&lt;br/&gt;FASHION&lt;/div&gt;
+                                          &lt;p&gt;New &amp; Fvhresh collection&lt;br/&gt;arraival in believe store&lt;/p&gt;
+                                          &lt;a href="" class="btn btn-blue"&gt;Shop now&lt;/a&gt;
+                                      &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="col-md-6"&gt;
+                                       &lt;div class="slide-offers-right"&gt;
+                                          &lt;div class="slide-offers-title"&gt;&lt;span&gt;Women&#x2019;s&lt;/span&gt;&lt;br/&gt;FASHION&lt;/div&gt;
+                                          &lt;p&gt;New &amp; Fvhresh collection&lt;br/&gt;arraival in believe store&lt;/p&gt;
+                                          &lt;a href="" class="btn btn-magenta"&gt;Shop now&lt;/a&gt;
+                                      &lt;/div&gt;
+                                  &lt;/div&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="item"&gt;
+                      &lt;img src="images/slider-2.jpg" alt="slide-2" class="img-responsive"&gt;
+                      &lt;div class="slider-desc"&gt;
+                          &lt;div class="container"&gt;
+                              &lt;div class="row"&gt;
+                                  &lt;div class="col-md-6"&gt;
+                                      &lt;div class="slide-offers-left"&gt;
+                                          &lt;div class="slide-offers-title"&gt;&lt;span&gt;50% Price cut&lt;/span&gt;&lt;br/&gt;for online order&lt;/div&gt;
+                                          &lt;p&gt;New &amp; Fvhresh collection&lt;br/&gt;arraival in believe store&lt;/p&gt;
+                                          &lt;a href="" class="btn btn-blue"&gt;Shop now&lt;/a&gt;
+                                      &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="col-md-6"&gt;
+                                       
+                                  &lt;/div&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt; &lt;!-- Slider --&gt;
+					</code>
+				</pre>
+			</p>
+			
+			<hr/>
+			<h3 id="css-structure">B. CSS Structure</h3>
+			<p>
+				The following css files are used in every template html files. They can be found in the HEAD section of the page. Style.css is the template css file, the others are twitter bootstrap and the styles require for each template feature. 
+			</p>
+			<pre>
+				<code>
+&lt;!-- fonts --&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'&gt;
+&lt;link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'&gt;
+      
+&lt;!-- Bootstrap --&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+    
+&lt;!-- main css --&gt;
+&lt;link href="style.css" rel="stylesheet"&gt;
+&lt;link href="responsive.css" rel="stylesheet"&gt;
+    
+&lt;!-- Slider --&gt;
+&lt;link href="css/owl.carousel.css" rel="stylesheet"&gt;
+&lt;link href="css/owl.theme.css" rel="stylesheet"&gt;
+&lt;link href="css/owl.transitions.css" rel="stylesheet"&gt; 
+      
+&lt;!-- lightbox --&gt;
+&lt;link href="css/prettyPhoto.css" rel="stylesheet"&gt;
+
+&lt;!-- price slider --&gt;
+&lt;link href="css/ui.css" rel="stylesheet"&gt;
+				</code>
+			</pre>
+			<ul>
+				<li><b>style.css</b> - Main CSS for template, all main styles are here.</li>
+				<li><b>responsive.css</b> - Main CSS for Responsive template, all main responsive styles are here.</li>
+				<li>CSS
+					<ul>
+						<li><b>bootstrap.min.css</b> - Default styling for all basic HTML elements by Twitter Bootstrap and Default styling to control HTML elements in various screen width by Twitter Bootstrap</li>
+						<li><b>owl.carousel.css</b> - Default styling for Main Slider, and Page Slider</li>
+						<li><b>owl.theme.css</b> - Default styling for Theme of Slider</li>
+						<li><b>owl.transitions.css</b> - Default styling where Contains many transition efect for slider</li>
+						<li><b>prettyPhoto.css</b> - Default styling where Contains lightbox pop up</li>
+						<li><b>ui.css</b> - Default styling where Contains price slider style</li>
+
+					</ul>
+				</li>
+			</ul>
+			<hr/>
+			<h3 id="java">C. Javascript</h3>
+				<p>
+					This template requires the following javascript files. You should place them in every template html files. at the bottom after tag "<code>&lt;!-- end main wrapper --&gt;</code>" or at the top before "<code>&lt;!-- /head --&gt;</code>" tag.
+				</p>
+				<pre>
+					<code>
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="js/library.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/owl.carousel.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.raty.js"&gt;&lt;/script&gt;
+    &lt;script src="js/ui.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.prettyPhoto.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.selectbox-0.2.js"&gt;&lt;/script&gt;
+    &lt;script src="js/theme-script.js"&gt;&lt;/script&gt;
+					</code>
+				</pre>
+				<p><b>Contact page</b> requires more js file to set a Google map. </p>
+				<pre>
+					<code>
+&lt;script src="https://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+&lt;script&gt;
+        function initialize() {
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(23.0504397, 72.577511),
+                zoom: 10,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+            }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    &lt;/script&gt;
+					</code>
+				</pre>
+				<hr/>
+				<h3 id="other">D. Other Details</h3>
+				<p>
+					This template include php file (send.php) that will process the contact form in contact.html.
+				</p>
+				<pre>
+					<code>
+&lt;?php
+
+$field_name = $_POST['cf_name'];
+
+$field_email = $_POST['cf_email'];
+
+$field_subject = $_POST['cf_subject'];
+
+$field_message = $_POST['cf_message'];
+
+
+
+$mail_to = 'agung@puriwp.com';
+
+$subject = 'believe - '.$field_subject;
+
+
+
+$body_message = 'From: '.$field_name."\n";
+
+$body_message .= 'E-mail: '.$field_email."\n";
+
+$body_message .= 'Message: '.$field_message;
+
+
+
+$headers = 'From: '.$field_email."\r\n";
+
+$headers .= 'Reply-To: '.$field_email."\r\n";
+
+
+
+$mail_status = mail($mail_to, $subject, $body_message, $headers);
+
+
+
+if ($mail_status) { ?&gt;
+
+	&lt;script language="javascript" type="text/javascript"&gt;
+
+		alert('Thank you for the message. We will contact you shortly.');
+
+		window.location = 'contact.html';
+
+	&lt;/script&gt;
+
+&lt;?php
+
+}
+
+else { ?&gt;
+
+	&lt;script language="javascript" type="text/javascript"&gt;
+
+		alert('Message failed. Please, send an email to chup1ds@gmail.com');
+
+		window.location = 'contact.html';
+
+	&lt;/script&gt;
+
+&lt;?php
+
+}
+
+?&gt;
+					</code>
+				</pre>
+				<hr/>
+				<h3 id="uploading">E. Uploading Templates</h3>
+				<p>
+					Best way to upload template is if you use FTP program. I strongly recomment you to use <a href="http://filezilla-project.org/">Filezilla</a>.
+					Filezilla is available for PC and Mac and it's easy to use. We assume that you already have hosting, so open filezilla, login and find "public_html" folder. On some servers it is called "www" folder...that's folder where you need to upload all files.
+				</p>
+				<h3 id="credit">F. Credits & Source</h3>
+				
+				<p>
+					During template development i used those javascript and graphic files:
+					<ul>
+						<li><a href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
+	<li><a href="http://www.owlgraphic.com/owlcarousel/">Owl Carousel</a></li>
+	<li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+	<li><a href="http://no-margin-for-errors.com/demos/prettyphoto_image_map/">Pretty photo Lightbox</a></li>
+	<li><a href="http://webotlehos.com/raty">Jquery Raty</a></li>
+	<li><a href="http://jqueryui.com">Jquery ui</a></li>
+					</ul>
+				</p>
+
+<h3>Notes</h3>
+<p>All the images shown on the Shopping <a href="http://demo.puriwp.com/believe-static">demo site</a> are meant for demo purpose only. In the template packages we provide image placeholder instead.</p>
+
+		</div>
+	</body>
+</html>

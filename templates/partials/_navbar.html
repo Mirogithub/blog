@@ -1,0 +1,58 @@
+{% load static %}
+<div id="believe-nav"> <!-- Nav -->
+  <div class="container">
+    <div class="min-marg">
+      <nav class="navbar navbar-default">
+        <!-- <div class="container-fluid"> -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'textpage_url' 'about_us' %}"><img src="{% static 'images/logo.svg' %}" alt="logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'textpage_url' 'about_us' %}">About us</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles <i class="fa fa-angle-down"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'articlelist_url' %}">ALL ARTICLES</a></li>
+                <li><a href="{% url 'article_cat_list_url' 'sport' %}">Articles about sport</a></li>
+                <li><a href="{% url 'article_cat_list_url' 'technologies' %}">Articles about technologies</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MANAGE ARTICLES <i class="fa fa-angle-down"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'article_create_url' %}">Create new article</a></li>
+                <li><a href="{% url 'tag_create_url' %}">Create new tag</a></li>
+                <li><a href="{% url 'taglist_url' %}">Manage tags</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+        <!--</div> -->
+
+      </nav>
+    </div>
+<!--
+    <div class="srch-form">
+        <form class="side-search"}">
+            <div class="input-group">
+                <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon2">
+                <a href="" class="input-group-addon btn-side-serach" id="basic-addon2"><i class="fa fa-search"></i></a>
+            </div>
+        </form>
+    </div> -->
+
+  </div>
+</div> <!-- Nav -->

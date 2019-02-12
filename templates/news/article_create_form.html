@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} | Authorisation {% endblock %}
+
+{% block content %}
+<div id="content">
+  <div class="page-title">
+    <div class="container">
+      <div class="page-title-inner clearfix">
+        <h3>ADD ARTICLE</h3>
+        <div class="breadcumb">
+          <a href="/">HOME</a>
+          <span> / </span>
+          <span>Add article</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="login-block">
+      <div class="row title-login clearfix">
+        <div class="col-md-6 one-block active" data-tab="#login">Add article</div>
+      </div>
+      <div class="row tab-box clearfix">
+        <div class="col-md-6 box-tab" id="login">
+          <form action="{% url 'article_create_url' %}" method="POST" class="comment-form" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {% for field in form %}
+              <div class="form-group">
+
+                {% if field.errors %}
+                  <div class="alart alert-danger">
+                    {{ field.errors }}
+                  </div>
+                {% endif %}
+
+                <label>{{ field.label }}</label><br>
+                {{ field }}
+              </div>
+            {% endfor %}
+
+            <button type="submit" class="btn-brand">Create article</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

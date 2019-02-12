@@ -1,0 +1,38 @@
+<div class="top"> <!-- top -->
+  <div class="container">
+    <ul class="top-support">
+      <li><i class="fashion-1"></i><span>+38 (073) 999-90-09</span></li>
+      <li><a href="mailto:contact@our.support.com"><i class="fashion-2"></i><span>shopy@gmail.com</span></a></li>
+    </ul>
+    <div class="top-offers">
+      <div class="alert alert-warning alert-dismissible fade in offers" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fashion-3"></i></span></button>
+          Very simple Django site
+      </div>
+    </div>
+    <div class="top-control">
+
+    {% if user.is_authenticated %}
+      <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
+        Logout
+      </a>
+      <form action="{% url 'logout' %}" method="POST" id="logout">
+        {% csrf_token %}
+        <input type="hidden">
+      </form>
+      <span>Welcome {{ user.first_name }}</span>
+    {% else %}
+      <a href="{% url 'registration_url' %}">Registration</a><span>•</span>
+      <a href="{% url 'login' %}">Log in</a>
+    {% endif %}
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="top-offers show-mobile">
+      <div class="alert alert-warning alert-dismissible fade in offers" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fashion-3"></i></span></button>
+        My first Django site
+      </div>
+    </div>
+  </div>
+</div> <!-- top -->

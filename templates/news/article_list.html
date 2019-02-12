@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %} | {{ title }} {% endblock %}
+
+{% block content %}
+<div id="wrapper" class="homepage-1">
+  <div id="content"> <!-- Content -->
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title-inner clearfix">
+          <h3>ARTICLES</h3>
+          <div class="breadcumb"> <a href="{% url 'textpage_url' 'about_us' %}">HOME</a><span> / </span><span>Articles</span><span> / </span><span>{{ category }}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-page sing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="news-list-box">
+            {% if articles %}
+              {% for article in articles %}
+              <div class="one-block">
+                {% if article.photo_main %}
+                <a href="{{ article.get_absolute_url }}" class="box-img">
+                  <img src="{{ article.photo_main.url }}" alt="img">
+                </a>
+                {% else %}
+                <a href="{{ article.get_absolute_url }}" class="box-img">
+                  <img src="{% static 'images/user-picture.png' %}">
+                </a>
+                {% endif %}
+                <div class="box-txt">
+                  <div class="name-article"><a href="{{ article.get_absolute_url }}">{{ article.name }}</a></div>
+                  <ul class="info-item">
+                    <li>{{ article.date|naturaltime  }}</li>
+                  </ul>
+                  <p>{{ article.description }}</p>
+
+                  <form action="{{ article.get_update_url }}" method="GET">
+                    <button type="submit" class="btn-brand">Update</button>
+                  </form><br>
+
+                  <form action="{{ article.get_delete_url }}" method="GET">
+                    <button type="submit" class="btn-danger">Delete</button>
+                  </form>
+
+                </div>
+              </div>
+              {% endfor %}
+            {% else %}
+                <p>No News Available</p>
+            {% endif %}
+          </div>
+          {% if is_paginated %}
+            <nav class="product-pagination">
+              <ul class="pagination believe-pag">
+              {% for n in articles.paginator.page_range %}
+
+                {% if articles.number == n %}
+                  <li><a href="?page={{ n }}"><b>-{{ n }}-</b></a></li>
+                {% else %}
+                  <li><a href="?page={{ n }}">{{ n }}</a></li>
+                {% endif %}
+
+              {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
